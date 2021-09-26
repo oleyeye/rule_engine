@@ -1,0 +1,42 @@
+{
+    "name": "rule_engine",
+    "version": "1.0.0",
+    "description": "A mini rule engine, inspired by java easy rule",
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "jsnext:main": "dist/index.es.js",
+    "authors": [
+        {
+            "name": "Li, Qiang",
+            "email": "Johnson.Li@anz.com"
+        }
+    ],
+    "scripts": {
+        "build": "rollup -c",
+        "clean": "rm -rf dist",
+        "test": "jest --coverage",
+        "prepack": "npm run clean && npm run build && node setupPackage.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [],
+    "author": "",
+    "License": "ISC",
+    "devDependencies": {
+        "@types/jest": "^26.0.14",
+        "jest": "^26.5.3",
+        "rollup": "^2.31.0",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-peer-deps-external": "^2.2.3",
+        "rollup-plugin-typescript2": "^0.27.3",
+        "ts-jest": "^ 26.4 .1",
+        "typescript": "^4.0.3"
+    },
+    "jest": {
+        "preset": "ts-jest",
+        "testEnvironment": "node",
+        "rootDir": "src"
+    }
+}
